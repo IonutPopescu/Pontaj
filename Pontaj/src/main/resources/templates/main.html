@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1"/>
+	<title>Insert title here</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
+	<link rel="stylesheet" href="css/style.css" type="text/css"/> 
+</head>
+<body>
+	<h2> <span th:text="${header}"/></h2>
+<form action="/main" method="post">
+<table class="table" style="width: auto;">
+   <thead>
+     <tr>
+       <th class="col-md-1">Start date</th>
+       <th class="col-md-1">End date</th>
+       <th class="col-md-1">Difference</th>
+     </tr>
+   </thead>
+   <tbody>
+   
+   <th:block th:each="element : ${pontajList}">
+	     <tr>
+	       <td th:text="${element.dateStart}"></td>
+	       <td th:text="${element.dateEnd}"></td>
+	       <td th:text="${element.difference}"></td>
+	     </tr>
+	</th:block>
+   
+   </tbody>
+ </table>
+  <div class="input-group" >
+   <p> Total difference: <span th:text="${sum_difference}"/></p>
+ </div>
+ <div class="input-group" >
+   <label for="start_date">Start date</label>
+   <input id="start_date" type="datetime-local" class="form-control" name="start_date" placeholder="Start date" required = "true"/>
+   <label for="end_date">End date</label>
+   <input id="end_date" type="datetime-local" class="form-control" name="end_date" placeholder="End date" required = "true"/>
+ </div>
+ <div>
+   <button type="submit" class="btn btn-primary" id="add">Add</button> 
+ </div>
+
+</form>
+
+</body>
+</html>

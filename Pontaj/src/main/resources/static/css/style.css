@@ -1,0 +1,94 @@
+body {
+/*     background-color: powderblue; */
+width:100%;
+margin:0 auto;
+}
+h1 {
+    color: blue;
+}
+/table {
+	table-layout: fixed;
+    word-wrap: break-word;
+    margin-top: 60px;
+    margin-left: 60px;
+    color: blue;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.well {
+    background: none;
+    height: 620px;
+}
+
+.table-scroll tbody {
+    position: absolute;
+    overflow-y: scroll;
+    height: 550px;
+}
+
+.table-scroll tr {
+    width: 60%;
+    table-layout: fixed;
+    display: inline-table;
+}
+
+.table-scroll thead > tr > th {
+    border: none; 
+    color: blue;
+}
+
+.well-log {
+    background: none;
+    height: 400px;
+}
+
+.table-scroll-log tbody {
+    position: absolute;
+    overflow-y: scroll;
+    height: 320px;
+}
+
+.table-scroll-log tr {
+    width: 60%;
+    table-layout: fixed;
+    display: inline-table;
+}
+
+.table-scroll-log thead > tr > th {
+    border: none; 
+    color: blue;
+}
+
+body { padding-bottom: 70px; }
+
+p {
+    color: red;
+}
+
+.filterable {
+    margin-top: 15px;
+}
+.filterable .panel-heading .pull-right {
+    margin-top: -20px;
+}
+.filterable .filters input[disabled] {
+    background-color: transparent;
+    border: none;
+    cursor: auto;
+    box-shadow: none;
+    padding: 0;
+    height: auto;
+}
+.filterable .filters input[disabled]::-webkit-input-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]::-moz-placeholder {
+    color: #333;
+}
+.filterable .filters input[disabled]:-ms-input-placeholder {
+    color: #333;
+}
